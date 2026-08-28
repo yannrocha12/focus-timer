@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foco — Timer Pomodoro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Foco</h1>
+
+    <div class="modes" role="tablist" aria-label="Modo de sessão">
+      <button class="mode-btn active" data-mode="focus" data-minutes="25">Foco</button>
+      <button class="mode-btn" data-mode="short" data-minutes="5">Pausa curta</button>
+      <button class="mode-btn" data-mode="long" data-minutes="15">Pausa longa</button>
+    </div>
+
+    <div class="ring-wrap">
+      <svg class="ring" viewBox="0 0 220 220">
+        <circle class="ring-bg" cx="110" cy="110" r="100"></circle>
+        <circle class="ring-progress" cx="110" cy="110" r="100"></circle>
+      </svg>
+      <div class="time-display">
+        <span id="time">25:00</span>
+        <span id="cycle-label">Ciclo 1</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="startPause" class="btn primary">Começar</button>
+      <button id="reset" class="btn">Reiniciar</button>
+    </div>
+
+    <div class="settings">
+      <label>
+        Foco (min)
+        <input type="number" id="focusMinutes" min="1" max="90" value="25">
+      </label>
+      <label>
+        Pausa curta (min)
+        <input type="number" id="shortMinutes" min="1" max="30" value="5">
+      </label>
+      <label>
+        Pausa longa (min)
+        <input type="number" id="longMinutes" min="1" max="60" value="15">
+      </label>
+    </div>
+
+    <section class="history">
+      <div class="history-header">
+        <h2>Sessões de hoje</h2>
+        <button id="clearHistory" class="link-btn">limpar</button>
+      </div>
+      <ul id="historyList"><li class="empty">Nenhuma sessão de foco concluída ainda.</li></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
