@@ -6,7 +6,7 @@ Timer de produtividade estilo Pomodoro, 100% front-end (HTML/CSS/JS puro, sem de
 
 Basta abrir `index.html` no navegador — não precisa de servidor nem instalação.
 
-Se preferir servir localmente (ex.: para evitar restrições de `file://` em alguns navegores):
+Se preferir servir localmente (ex.: para evitar restrições de `file://` em alguns navegadores):
 
 ```bash
 npx serve .
